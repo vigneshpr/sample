@@ -7,4 +7,6 @@ urlpatterns = [
     url(r'^test1/', views.index_test1, name='index'),
     url(r'^test2/', views.index_test2, name='index'),
     url(r'^test3/', views.index_test3, name='index'),
+
+    url(r'^sample44/',views.index_sample4, name = 'sample')
 ]
