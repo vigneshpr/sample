@@ -1,4 +1,5 @@
 #name reverse method
+#edited in git hub
 def na():
 	name1=input("Enter First Name:")
 	name2=input("Enter last Name:")
