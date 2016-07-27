@@ -18,3 +18,13 @@ def exiit():
 
 
 
+	
+'''
+Nested List Iteration
+
+>>> a = [[1, 3, 4], [2, 4, 4], [3, 4, 5]]
+>>> a
+[[1, 3, 4], [2, 4, 4], [3, 4, 5]]
+>>> for list in a:
+...     for number in list:
+...         print number'''
