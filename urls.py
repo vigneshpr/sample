@@ -1,5 +1,6 @@
-from django.conf.urls import url
+samle edit
 
+<<<<<<< HEAD
 from . import views
 
 urlpatterns = [
@@ -10,3 +11,6 @@ urlpatterns = [
 
     url(r'^sample44/',views.index_sample4, name = 'sample')
 ]
+=======
+edited in website
+>>>>>>> d024de77d035f6ab7db1ed8111c70675d639c92c

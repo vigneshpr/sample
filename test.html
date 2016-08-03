@@ -1,0 +1,217 @@
+<html>  
+    <head>
+        <script>
+            /*function emailld()
+            {
+                if(valiem()==false){
+                document.viki.emailld.focus()
+                        document.viki.emailid.select()}
+            }*/
+
+            function tog () 
+            {       //function for change gender button
+                if(document.getElementById('gender_Male').checked) 
+                {
+                    document.getElementById('gender_Female').checked = 'false'
+  
+                }
+                else if(document.getElementById('gender_Female').checked) 
+                {
+                    document.getElementById('gender_Male').checked = 'false'
+                }
+            }
+
+
+            function changebg() {  //function for change bg button 
+                var person = prompt("Enter Color Value");
+                document.body.style.backgroundColor = person;
+                                }
+
+            function getn()  //function for get namebutton
+                {
+                    var name = document.viki.name1.value
+                    alert(name)
+                }
+
+            function getname() {    //function to alert user for entering null value name 
+                var name = document.viki.name1.value
+                if (name == null || name == "") 
+                    {
+                        alert("Name must be filled out");
+                    }
+                    //alert(name)
+                                }
+            function getemail() {    //function to alert user for entering null value in email 
+                var email1 = document.viki.emailid.value
+                //var name2 = document.viki.name1.value
+                                if (email1 == null || email1 == "") 
+                    {
+                        alert("email must be filled out")
+                    }else{
+               alert(email1)}
+                    }
+                
+            function drpd()     //alert user to know  which state is chosen
+                    {
+                        var value = document.viki.drp.value;
+                        alert(value)
+                    }
+            function ValidateEmail()   //email validaton using regex
+                    {  
+                        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.viki.emailid.value))  
+                            {  
+                            return (true)  
+                            }  else{
+                                alert("invalid Email id")                        
+                            
+                                                        return (false)  }
+                        }  
+            function ChkPwd()   //validation to find strong password
+                    {   
+                        var passw = /^(?=.*[a-z])(?=.*\d)(?=.*[A-Z]).{6,20}$/;  
+                        if((document.viki.passwd.value).match(passw))   
+                            {   
+
+                                return true;  
+                            }  
+                        else  
+                            {   
+                                alert('Password must contain Min 6 character and combination of upper case lower case and number...!') 
+                                
+                                return false;  
+                            }  
+                    }  
+            function CheckBox()  //validation to check atleast one hobbie
+                    {
+                        if(document.viki.play.checked == false && document.viki.drive.checked == false && document.viki.codes.checked == false && document.viki.movies.checked == false)
+                        {
+                            alert("Select any one Hobbie")
+                        }
+                        else{
+                            
+                            if(valiem()==true)
+                            {
+                            var s=document.viki.name1.value;
+                              var d=  document.viki.emailid.value; 
+                              alert("Name:\t"+s+"\n"+"Emailid:\t"+d+"\nsuccess")
+                        } else{alert("invalid")}
+                            }
+
+                            
+                    }
+            function TextBox()  //set the cursor position in text box afetr loading
+                    {
+                        document.viki.name1.focus();
+                        document.viki.name1.select();
+                    }
+            
+            function AutoFill()
+            {
+                if((document.viki.emailid.value==""))// && (document.viki.emailid.value=""))
+                {
+                    document.viki.emailid.value="xfdds";
+                }else{return true}
+            
+                
+            }
+            
+        </script>
+    </head>
+        <body onload="TextBox()">
+                                <form method="POST" name="viki">
+                                    <table style="height: 288px;" width="461">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <label for="name">Name:</label>
+                                                </td>
+                                                <td>
+                                                    <input name="name1" size="30" type="text" value="" placeholder="Enter your name"  onblur="AutoFill()"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="email">Email-Id:
+                                                        <br />
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input size="30" type="text" name="emailid" value="" placeholder="Enter a valid email address"   />
+                                                    
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="passwd">Password
+                                                        <br />
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input name="passwd" size="30" type="password" value="" placeholder="Enter your password"    />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="Gender">Gender:
+                                                        <br />
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                   <input type="radio" name="gender" id="gender_Male" value="Male" />Male
+                                                    <input type="radio" name="gender" id="gender_Female" value="Female" />Female
+                                                    
+
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="hobbies">Hobbies:
+                                                        <br />
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input  name="play" type="checkbox" value='play' />Playing
+                                                    <br />
+                                                    <input name="codes" type="checkbox" value="Codes" />Coding
+                                                    <br />
+                                                    <input name="movies" type="checkbox" value="movies" />Movies
+                                                    <br />
+                                                    <input name="drive" type="checkbox" value="drive" />Driving
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="State">State:
+                                                        <br />
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <select name="drp" onchange='drpd()'>
+                                                        <option >select</option>
+                                                        <option value="TN">TAMILNADU</option>
+                                                        <option value="AP">ANDHRA</option>
+                                                        <option value="MH">MAHARASHTRA</option>
+                                                        <option value="HR">HARAYANA</option>
+                                                        <option value="KL">KERALA</option>
+                                                        <option value="OD">ODISA</option>
+                                                        <option value="DL">DELHI</option>
+                                                        <option value="PB">PUNJAB</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <input type="button" onclick="changebg()" value="Change BG"/>
+                                                    <input type="button" value="submit" onclick='getname();ValidateEmail();CheckBox()'/>
+                                                    <input type="button" onclick="getname()" value="Get name"/>
+                                                    <input type="button" onclick="getemail()" value="Get Email"/>
+                                                    <input type="button" value="Change Gender" onclick='tog()' />
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                  </form>
+                            </body>
+                        </html>
+                    
