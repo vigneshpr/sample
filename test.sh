@@ -1,5 +1,5 @@
-add        Add file contents to the index
-   bisect     Find by binary search the change that introduced a bug
+
+'edited'
 
    checkout   Checkout a branch or paths to the working tree
    clone      Clone a repository into a new directory
