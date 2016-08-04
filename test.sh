@@ -1,5 +1,5 @@
 
-'edited at replica'
+'edited at website'
 
    checkout   Checkout a branch or paths to the working tree
    clone      Clone a repository into a new directory
