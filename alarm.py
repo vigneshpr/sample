@@ -10,4 +10,4 @@ while var == 1 :
    		os.system("pwd")
    		break
 
-
+"i edited the code at replica"
